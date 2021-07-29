@@ -38,10 +38,6 @@ public class GoodsController {
     @RequestMapping("/list")
     @RequiresPermissions("demo:goods:list")
     public R list(@RequestParam Map<String, Object> params){
-        System.out.println("----------------master 7777");
-        System.out.println("----------------master 7777");
-        System.out.println("----------------hot fix88888");
-        System.out.println("----------------hot fix888888");
         PageUtils page = goodsService.queryPage(params);
 
         return R.ok().put("page", page);
