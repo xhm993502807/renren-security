@@ -39,7 +39,7 @@ public class GoodsController {
     @RequiresPermissions("demo:goods:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = goodsService.queryPage(params);
-
+        System.out.println("1111111111111111111");
         return R.ok().put("page", page);
     }
 
